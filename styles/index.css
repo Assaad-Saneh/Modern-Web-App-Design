@@ -1,0 +1,346 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+    width: 0.3rem;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: #24252a;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color:rgb(0, 130, 155);
+    border-radius: 3px;
+}
+
+.navbar-header li, a, button{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #edf0f1;
+    background-color: #24252a;
+    text-decoration: none;
+}
+
+ul{
+    background-color: #24252a;
+}
+
+.navbar-header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #24252a;
+    padding: 20px;
+    z-index: 5;
+    width: 100vw;
+    height: 45px;
+}
+
+.logo{
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav__links a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links a:hover{
+    transition: all 0.3s ease 0s;
+    color: rgb(0, 130, 155);
+}
+
+.navbar-header button{
+    cursor: pointer;
+    padding: 5px 15px;
+    background-color: rgb(0, 130, 155);
+    border: none;
+    border-radius: 50px;
+    margin-left: 30px;
+    transition: all 0.3s ease 0s;
+}
+
+.navbar-header button:hover{
+    background-color: rgb(0, 130, 155, 0.8);
+}
+
+a{
+    text-decoration: none;
+    padding: auto;
+}
+
+.v-header{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    flex-direction: column;
+}
+
+.container{
+    max-width: 960px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    text-align: center;
+}
+
+.fullscreen-video-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.fullscreen-video-wrap video{
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.header-overlay{
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: #225470;
+    z-index: 1;
+    opacity: 0.75;
+}
+
+.header-content{
+    z-index: 2;
+    margin-top: 8rem;
+    margin-bottom: auto;
+}
+
+.header-content h1{
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.header-content p{
+    font-size: 1.5rem;
+    display: block;
+    padding-bottom: 2rem;
+}
+
+.btn{
+    background: rgba(0,0,0,0);
+    border: 2px solid rgb(0, 130, 155);
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 35px;
+    transition: 0.4s ease-in-out;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.btn:hover{
+    background: rgb(0, 130, 155);
+    transform: scale(1.2);
+}
+
+.section{
+    padding: 20px 0px;
+    background: #24252a;
+    color: #fff;
+}
+
+.section-b{
+    padding: 20px 0px;
+    background: #fff;
+    color: #24252a;
+}
+
+@media(max-width:960px){
+    .container{
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+}
+
+
+.description{
+    margin: 0%;
+    padding: 50px;
+    background-color:#fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+
+.middle-page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(180deg,#fff, rgb(0, 130, 155));
+    margin-top: 0;
+}
+
+.card{
+    margin: 15px;
+
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 210px 80px;
+    grid-template-areas: "image" "text" "stats";
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    text-align: center;
+
+    transition: 0.5s ease-out;
+    cursor: pointer;
+}
+
+.card-image{
+    grid-area: image;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+    display: flex;
+}
+
+.card-image img{
+    flex-shrink: 0;
+    min-width: 100%;
+    max-width: 100%;
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+}
+
+.card-text{
+    grid-area: text;
+    padding: 1.2rem 1.2rem;
+}
+
+.card-text p{
+    color: grey;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.card-text h2{
+    margin-top: 0;
+    font-size: 28px;
+}
+
+.card-stats{
+    grid-area: stats;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background: rgb(255, 40, 40);
+    cursor: pointer;
+}
+
+.card-stats a{
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background: rgb(255, 40, 40);
+}
+
+.card-stats .stat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.card:hover{
+    transform: scale(1.2);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    margin: 40px;
+}
+
+.join-us{
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: column;
+    background: linear-gradient(0deg,#24252a,rgb(0, 130, 155));
+}
+
+.join-us .btn{
+    background: rgba(0,0,0,0);
+    border: 3px solid rgb(255, 40, 40);
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 35px;
+    transition: 0.4s ease-in-out;
+    width: 500px;
+    text-align: center;
+}
+
+.join-us .btn:hover{
+    background: rgb(255, 40, 40);
+    transform: scale(1.2);
+}
+
+.join-us .description{
+    background: rgba(0, 0, 0, 0);
+    text-align: center;
+    justify-content: center;
+    color:#fff;
+}
+
+.small-text{
+    background: rgba(0, 0, 0, 0);
+    text-align: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color:#fff;
+    margin:50px;
+}
